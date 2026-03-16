@@ -1,33 +1,56 @@
 aid: orange
 name: Orange
 description: >-
-  Develop new customer experiences powered by programmable networksEnvision a
+  Develop new customer experiences powered by programmable networks. Envision a
   world where innovation is combined with robust authentication and automated
-  high-level service requests 
+  high-level service requests.
 type: Index
 position: Consumer
 access: 3rd-Party
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
+  - Telecom
+  - Network
   - API
 created: '2025-02-09'
-modified: '2025-02-09'
+modified: '2026-03-16'
 url: >-
   https://raw.githubusercontent.com/api-evangelist/orange/refs/heads/main/apis.yml
 specificationVersion: '0.19'
 apis:
   - aid: orange:orange
-    name: Orange
+    name: Orange APIs
     description: >-
-      Develop new customer experiences powered by programmable networksEnvision
+      Develop new customer experiences powered by programmable networks. Envision
       a world where innovation is combined with robust authentication and
-      automated high-level service requests 
-    humanURL: ' https://developer.orange.com/'
+      automated high-level service requests.
+    humanURL: https://developer.orange.com/
     tags:
+      - Telecom
+      - Network
       - API
     properties:
       - type: Documentation
-        url: ' https://developer.orange.com/'
+        url: https://developer.orange.com/
+      - type: Getting Started
+        url: https://developer.orange.com/get-started
+common:
+  - type: Portal
+    url: https://developer.orange.com/
+  - type: Documentation
+    url: https://developer.orange.com/apis/
+  - type: Sign Up
+    url: https://developer.orange.com/user/register
+  - type: Login
+    url: https://developer.orange.com/user/login
+  - type: Terms of Service
+    url: https://developer.orange.com/terms-conditions
+  - type: Privacy Policy
+    url: https://developer.orange.com/privacy-policy
+  - type: Support
+    url: https://developer.orange.com/forum
+  - type: Website
+    url: https://www.orange.com/
 maintainers:
   - FN: Kin Lane
-    email: info@apievangelist.com
+    email: kin@apievangelist.com
