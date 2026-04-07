@@ -9,9 +9,8 @@ position: Consumer
 access: 3rd-Party
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Telecom
   - Network
-  - API
+  - Telecom
 created: '2025-02-09'
 modified: '2026-03-16'
 url: >-
@@ -26,9 +25,8 @@ apis:
       automated high-level service requests.
     humanURL: https://developer.orange.com/
     tags:
-      - Telecom
       - Network
-      - API
+      - Telecom
     properties:
       - type: Documentation
         url: https://developer.orange.com/
