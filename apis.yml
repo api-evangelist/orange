@@ -194,13 +194,13 @@ common:
     url: https://developer.orange.com/
   - type: Documentation
     url: https://developer.orange.com/apis/
-  - type: Sign Up
+  - type: SignUp
     url: https://developer.orange.com/user/register
   - type: Login
     url: https://developer.orange.com/user/login
-  - type: Terms of Service
+  - type: TermsOfService
     url: https://developer.orange.com/terms-conditions
-  - type: Privacy Policy
+  - type: PrivacyPolicy
     url: https://developer.orange.com/privacy-policy
   - type: Support
     url: https://developer.orange.com/forum
