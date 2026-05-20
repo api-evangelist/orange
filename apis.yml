@@ -190,6 +190,10 @@ apis:
       - type: Documentation
         url: https://developer.orange.com/apis/
 common:
+  - type: GitHubOrganization
+    url: https://github.com/Orange-OpenSource
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/orange
   - type: Portal
     url: https://developer.orange.com/
   - type: Documentation
