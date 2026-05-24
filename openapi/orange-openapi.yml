@@ -1,0 +1,146 @@
+openapi: 3.1.0
+info:
+  title: Orange Number Verification API
+  version: '2.0'
+  description: |
+    Orange Network API for Number Verification, implementing the CAMARA
+    Number Verification specification. Allows applications to verify the
+    phone number associated with the user's device or retrieve the device
+    phone number after authentication via the mobile network.
+  contact:
+    name: Orange Developer
+    url: https://docs.developer.orange.com/network-apis/api-catalog/number-verification/playground/1.0/overview
+servers:
+  - url: https://api.orange.com/camara/number-verification/v2
+    description: Orange Number Verification API (CAMARA v2)
+security:
+  - openId:
+      - number-verification:verify
+      - number-verification:device-phone-number:read
+paths:
+  /verify:
+    post:
+      summary: Verify the provided phone number against the authenticated device
+      operationId: verifyNumber
+      parameters:
+        - name: x-correlator
+          in: header
+          required: false
+          schema:
+            type: string
+          description: Unique correlation identifier for request tracking
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NumberVerificationRequestBody'
+      responses:
+        '200':
+          description: Verification result
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NumberVerificationMatchResponse'
+        '400':
+          $ref: '#/components/responses/Generic400'
+        '401':
+          $ref: '#/components/responses/Generic401'
+        '403':
+          $ref: '#/components/responses/Generic403'
+  /device-phone-number:
+    get:
+      summary: Retrieve the phone number associated with the authenticated SIM
+      operationId: getDevicePhoneNumber
+      parameters:
+        - name: x-correlator
+          in: header
+          required: false
+          schema:
+            type: string
+      responses:
+        '200':
+          description: The device phone number
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DevicePhoneNumberResponse'
+        '400':
+          $ref: '#/components/responses/Generic400'
+        '401':
+          $ref: '#/components/responses/Generic401'
+        '403':
+          $ref: '#/components/responses/Generic403'
+components:
+  securitySchemes:
+    openId:
+      type: openIdConnect
+      openIdConnectUrl: https://api.orange.com/.well-known/openid-configuration
+  responses:
+    Generic400:
+      description: Invalid argument
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorInfo'
+    Generic401:
+      description: Unauthenticated
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorInfo'
+    Generic403:
+      description: Permission denied or user not authenticated by mobile network
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorInfo'
+  schemas:
+    NumberVerificationRequestBody:
+      type: object
+      description: >
+        Supply either phoneNumber or hashedPhoneNumber (not both).
+      properties:
+        phoneNumber:
+          type: string
+          pattern: '^\+[1-9][0-9]{4,15}$'
+          description: Phone number in E.164 format
+          examples:
+            - '+34123456789'
+        hashedPhoneNumber:
+          type: string
+          pattern: '^[A-Fa-f0-9]{64}$'
+          description: SHA-256 hex hash of the E.164 phone number
+    NumberVerificationMatchResponse:
+      type: object
+      required:
+        - devicePhoneNumberVerified
+      properties:
+        devicePhoneNumberVerified:
+          type: boolean
+          description: Whether the supplied number matches the authenticated device
+    DevicePhoneNumberResponse:
+      type: object
+      required:
+        - devicePhoneNumber
+      properties:
+        devicePhoneNumber:
+          type: string
+          pattern: '^\+[1-9][0-9]{4,15}$'
+          description: The phone number associated with the authenticated SIM in E.164 format
+    ErrorInfo:
+      type: object
+      required:
+        - status
+        - code
+        - message
+      properties:
+        status:
+          type: integer
+          description: HTTP status code
+        code:
+          type: string
+          description: Error code (e.g. INVALID_ARGUMENT, UNAUTHENTICATED, PERMISSION_DENIED)
+        message:
+          type: string
+          description: Human-readable error message
