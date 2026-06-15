@@ -1,0 +1,48 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Orange Number Verification API",
+    "version": "2.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Verify the provided phone number against the authenticated device",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.orange.com/camara/number-verification/v2/verify",
+        "headers": [
+          {
+            "name": "x-correlator",
+            "value": ""
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Verify the provided phone number against the authenticated device"
+    },
+    {
+      "info": {
+        "name": "Retrieve the phone number associated with the authenticated SIM",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://api.orange.com/camara/number-verification/v2/device-phone-number",
+        "headers": [
+          {
+            "name": "x-correlator",
+            "value": ""
+          }
+        ]
+      },
+      "docs": "Retrieve the phone number associated with the authenticated SIM"
+    }
+  ],
+  "bundled": true
+}
