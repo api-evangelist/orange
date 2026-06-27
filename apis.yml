@@ -198,7 +198,7 @@ common:
     url: https://developer.orange.com/
   - type: Documentation
     url: https://developer.orange.com/apis/
-  - type: SignUp
+  - type: Signup
     url: https://developer.orange.com/user/register
   - type: Login
     url: https://developer.orange.com/user/login
