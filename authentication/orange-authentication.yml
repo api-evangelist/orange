@@ -1,0 +1,12 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/orange-openapi.yml
+summary:
+  types:
+  - openIdConnect
+schemes:
+- name: openId
+  type: openIdConnect
+  openIdConnectUrl: https://api.orange.com/.well-known/openid-configuration
+  sources:
+  - openapi/orange-openapi.yml
