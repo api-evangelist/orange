@@ -190,6 +190,8 @@ apis:
       - type: Documentation
         url: https://developer.orange.com/apis/
 common:
+  - type: AgenticAccess
+    url: agentic-access/orange-agentic-access.yml
   - type: VulnerabilityDisclosure
     url: security/orange-vulnerability-disclosure.yml
   - type: DomainSecurity
