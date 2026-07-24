@@ -1,0 +1,101 @@
+openapi: 3.1.0
+info:
+  title: Orange Number Verification Device Phone Number API
+  version: '2.0'
+  description: 'Orange Network API for Number Verification, implementing the CAMARA
+
+    Number Verification specification. Allows applications to verify the
+
+    phone number associated with the user''s device or retrieve the device
+
+    phone number after authentication via the mobile network.
+
+    '
+  contact:
+    name: Orange Developer
+    url: https://docs.developer.orange.com/network-apis/api-catalog/number-verification/playground/1.0/overview
+servers:
+- url: https://api.orange.com/camara/number-verification/v2
+  description: Orange Number Verification API (CAMARA v2)
+security:
+- openId:
+  - number-verification:verify
+  - number-verification:device-phone-number:read
+tags:
+- name: Device Phone Number
+paths:
+  /device-phone-number:
+    get:
+      summary: Retrieve the phone number associated with the authenticated SIM
+      operationId: getDevicePhoneNumber
+      parameters:
+      - name: x-correlator
+        in: header
+        required: false
+        schema:
+          type: string
+      responses:
+        '200':
+          description: The device phone number
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DevicePhoneNumberResponse'
+        '400':
+          $ref: '#/components/responses/Generic400'
+        '401':
+          $ref: '#/components/responses/Generic401'
+        '403':
+          $ref: '#/components/responses/Generic403'
+      tags:
+      - Device Phone Number
+components:
+  responses:
+    Generic400:
+      description: Invalid argument
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorInfo'
+    Generic401:
+      description: Unauthenticated
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorInfo'
+    Generic403:
+      description: Permission denied or user not authenticated by mobile network
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorInfo'
+  schemas:
+    ErrorInfo:
+      type: object
+      required:
+      - status
+      - code
+      - message
+      properties:
+        status:
+          type: integer
+          description: HTTP status code
+        code:
+          type: string
+          description: Error code (e.g. INVALID_ARGUMENT, UNAUTHENTICATED, PERMISSION_DENIED)
+        message:
+          type: string
+          description: Human-readable error message
+    DevicePhoneNumberResponse:
+      type: object
+      required:
+      - devicePhoneNumber
+      properties:
+        devicePhoneNumber:
+          type: string
+          pattern: ^\+[1-9][0-9]{4,15}$
+          description: The phone number associated with the authenticated SIM in E.164 format
+  securitySchemes:
+    openId:
+      type: openIdConnect
+      openIdConnectUrl: https://api.orange.com/.well-known/openid-configuration
