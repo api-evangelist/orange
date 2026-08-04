@@ -1,0 +1,16 @@
+{
+  "provider": "orange",
+  "sources": [
+    "orange-device-phone-number-api-openapi.yml",
+    "orange-verify-api-openapi.yml"
+  ],
+  "outputs": [
+    "orange-device-phone-number-api-openapi.yml",
+    "orange-verify-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
