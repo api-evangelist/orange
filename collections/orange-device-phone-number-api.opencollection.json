@@ -1,0 +1,35 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Orange Number Verification Device Phone Number API",
+    "version": "2.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Device Phone Number",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Retrieve the phone number associated with the authenticated SIM",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.orange.com/camara/number-verification/v2/device-phone-number",
+            "headers": [
+              {
+                "name": "x-correlator",
+                "value": ""
+              }
+            ]
+          },
+          "docs": "Retrieve the phone number associated with the authenticated SIM"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

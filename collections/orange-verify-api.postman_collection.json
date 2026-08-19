@@ -1,0 +1,279 @@
+{
+  "item": [
+    {
+      "id": "5cb73f08-bce6-46e8-81b8-c8ce628525b4",
+      "name": "Verify",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "fddb6f07-f0d8-4c27-9a2a-378095e9b3bc",
+          "name": "Verify the provided phone number against the authenticated device",
+          "request": {
+            "name": "Verify the provided phone number against the authenticated device",
+            "description": {},
+            "url": {
+              "path": [
+                "verify"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "description": "Unique correlation identifier for request tracking",
+                "key": "x-correlator",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"phoneNumber\": \"<string>\",\n  \"hashedPhoneNumber\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "29998d1c-b85a-4e47-85e9-49840a595773",
+              "name": "Verification result",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "verify"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Unique correlation identifier for request tracking",
+                    "key": "x-correlator",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"phoneNumber\": \"+34123456789\",\n  \"hashedPhoneNumber\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"devicePhoneNumberVerified\": true\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "22637bd0-46c2-4977-885f-8274071627fa",
+              "name": "Invalid argument",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "verify"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Unique correlation identifier for request tracking",
+                    "key": "x-correlator",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"phoneNumber\": \"+34123456789\",\n  \"hashedPhoneNumber\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": 5087,\n  \"code\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "af9eaa45-465c-49ef-aece-4c8af18d2bb6",
+              "name": "Unauthenticated",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "verify"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Unique correlation identifier for request tracking",
+                    "key": "x-correlator",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"phoneNumber\": \"+34123456789\",\n  \"hashedPhoneNumber\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": 5087,\n  \"code\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "249c341c-cd33-4c0c-a2e2-f6e83588b382",
+              "name": "Permission denied or user not authenticated by mobile network",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "verify"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "description": "Unique correlation identifier for request tracking",
+                    "key": "x-correlator",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"phoneNumber\": \"+34123456789\",\n  \"hashedPhoneNumber\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": 5087,\n  \"code\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.orange.com/camara/number-verification/v2",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "765c0bc5-009b-4928-a792-57172ed7c62d",
+    "name": "Orange Number Verification Device Phone Number Verify API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Orange Network API for Number Verification, implementing the CAMARA\nNumber Verification specification. Allows applications to verify the\nphone number associated with the user's device or retrieve the device\nphone number after authentication via the mobile network.\n\n\nContact Support:\n Name: Orange Developer",
+      "type": "text/plain"
+    }
+  }
+}

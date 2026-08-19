@@ -1,0 +1,234 @@
+{
+  "item": [
+    {
+      "id": "2a504799-0e60-45d7-b206-baee59a591f2",
+      "name": "Device Phone Number",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "40d5f45b-a880-4699-bdc1-67084169e17f",
+          "name": "Retrieve the phone number associated with the authenticated SIM",
+          "request": {
+            "name": "Retrieve the phone number associated with the authenticated SIM",
+            "description": {},
+            "url": {
+              "path": [
+                "device-phone-number"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "x-correlator",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "052c002b-c3fe-4a23-b220-636d281300b9",
+              "name": "The device phone number",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "device-phone-number"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "key": "x-correlator",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"devicePhoneNumber\": \"+4709765234\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "dbc6fe9c-b64b-4e7a-bfb8-f618defec82e",
+              "name": "Invalid argument",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "device-phone-number"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "key": "x-correlator",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": 3488,\n  \"code\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "1438d62e-7da6-44e1-855e-c00104f4fac8",
+              "name": "Unauthenticated",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "device-phone-number"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "key": "x-correlator",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": 3488,\n  \"code\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "228ca525-26ab-4037-a18b-9abe28018411",
+              "name": "Permission denied or user not authenticated by mobile network",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "device-phone-number"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "disabled": false,
+                    "key": "x-correlator",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Forbidden",
+              "code": 403,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"status\": 3488,\n  \"code\": \"string\",\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.orange.com/camara/number-verification/v2",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "7582aa6b-dddf-4336-a9e0-72a84f6b7e64",
+    "name": "Orange Number Verification Device Phone Number API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Orange Network API for Number Verification, implementing the CAMARA\nNumber Verification specification. Allows applications to verify the\nphone number associated with the user's device or retrieve the device\nphone number after authentication via the mobile network.\n\n\nContact Support:\n Name: Orange Developer",
+      "type": "text/plain"
+    }
+  }
+}
