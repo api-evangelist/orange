@@ -163,6 +163,10 @@ apis:
   humanURL: https://developer.orange.com/apis/
   tags:
   - Payment
+  - Wallets
+  - Mobile Money
+  tags_raw:
+  - Payment
   - Wallet
   - Mobile Money
   properties:
