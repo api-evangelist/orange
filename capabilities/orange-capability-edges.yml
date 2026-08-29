@@ -1,0 +1,36 @@
+slug: orange
+provider: Orange
+generated_by: planning/capability-mapping/scripts/classify_capabilities.py
+model: claude-opus-5
+frame:
+- Telecommunications
+min_confidence: 0.7
+capability_model:
+  source: https://github.com/vincentmakes/turbo-ea-capabilities
+  license: CC-BY-4.0
+  attribution: Turbo EA Capabilities by Vincent Verdet — Turbo EA, https://github.com/vincentmakes/turbo-ea-capabilities,
+    CC BY 4.0
+  notice: NOTICE
+edge_count: 2
+edges:
+- tag: Verify
+  spec_file: orange-verify-api-openapi.yml
+  capability_id: BC-2640.60
+  capability_id_l1: BC-2640
+  capability_name: Subscriber Authentication & Authorisation
+  confidence: 0.72
+  evidence: POST /verify verifyNumber Verify the provided phone number against the authenticated device;
+    schema NumberVerificationMatchResponse
+  reason: Verifies a supplied phone number against the network-authenticated device/SIM — subscriber and
+    device authentication/authorisation via the mobile network, per the CAMARA Number Verification specification.
+- tag: Device Phone Number
+  spec_file: orange-device-phone-number-api-openapi.yml
+  capability_id: BC-2640.60
+  capability_id_l1: BC-2640
+  capability_name: Subscriber Authentication & Authorisation
+  confidence: 0.7
+  evidence: GET /device-phone-number getDevicePhoneNumber Retrieve the phone number associated with the
+    authenticated SIM
+  reason: CAMARA Number Verification API that leverages mobile-network authentication of the SIM to return
+    the subscriber MSISDN — subscriber/device authentication and identity assertion over the access network.
+    Sub-capability choice between subscriber identity and subscriber authentication is somewhat ambiguous.

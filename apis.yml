@@ -240,6 +240,9 @@ apis:
   - type: OpenAPI
     url: openapi/orange-verify-api-openapi.yml
 common:
+  - type: CapabilityMap
+    url: capabilities/orange-capability-edges.yml
+    name: Orange Business Capability Map
   - type: AgenticAccess
     url: agentic-access/orange-agentic-access.yml
   - type: VulnerabilityDisclosure
