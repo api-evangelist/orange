@@ -36,6 +36,14 @@ position: Consuming
 access: 3rd-Party
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/orange.png
 tags:
+  - Networks
+  - Telecom
+  - Identity
+  - Messaging
+  - Location
+  - Payments
+  - IoT
+tags_raw:
   - Network
   - Telecom
   - Identity
@@ -59,6 +67,10 @@ apis:
   tags:
   - Identity
   - Verification
+  - Networks
+  tags_raw:
+  - Identity
+  - Verification
   - Network
   properties:
   - type: Documentation
@@ -71,6 +83,10 @@ apis:
   humanURL: >-
     https://docs.developer.orange.com/network-apis/api-catalog/sim-swap/playground/1.0/overview
   tags:
+  - Fraud Prevention
+  - Identity
+  - Networks
+  tags_raw:
   - Fraud Prevention
   - Identity
   - Network
@@ -100,6 +116,9 @@ apis:
     verify continuity of identity.
   humanURL: https://docs.developer.orange.com/network-apis/api-catalog/device-swap/es/0.1/overview
   tags:
+  - Fraud Prevention
+  - Networks
+  tags_raw:
   - Fraud Prevention
   - Network
   properties:
@@ -140,6 +159,9 @@ apis:
   humanURL: https://developer.orange.com/apis/
   tags:
   - Location
+  - Networks
+  tags_raw:
+  - Location
   - Network
   properties:
   - type: Documentation
@@ -162,6 +184,10 @@ apis:
     Status, and Device Roaming Status.
   humanURL: https://developer.orange.com/apis/
   tags:
+  - Networks
+  - Quality of Service
+  - Insights
+  tags_raw:
   - Network
   - Quality of Service
   - Insights
@@ -175,7 +201,7 @@ apis:
     and payments.
   humanURL: https://developer.orange.com/apis/
   tags:
-  - Payment
+  - Payments
   - Wallets
   - Mobile Money
   tags_raw:
@@ -191,6 +217,9 @@ apis:
     Direct carrier billing API allowing customers to charge purchases to their Orange mobile bill.
   humanURL: https://developer.orange.com/apis/
   tags:
+  - Payments
+  - Carrier Billing
+  tags_raw:
   - Payment
   - Carrier Billing
   properties:
