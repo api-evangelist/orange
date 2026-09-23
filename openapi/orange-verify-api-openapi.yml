@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Orange Number Verification Device Phone Number Verify API
+  title: Orange Number Verification Verify API
   version: '2.0'
   description: 'Orange Network API for Number Verification, implementing the CAMARA
 
@@ -8,9 +8,7 @@ info:
 
     phone number associated with the user''s device or retrieve the device
 
-    phone number after authentication via the mobile network.
-
-    '
+    phone number after authentication via the mobile network.'
   contact:
     name: Orange Developer
     url: https://docs.developer.orange.com/network-apis/api-catalog/number-verification/playground/1.0/overview
@@ -58,6 +56,12 @@ paths:
       - Verify
 components:
   responses:
+    Generic403:
+      description: Permission denied or user not authenticated by mobile network
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorInfo'
     Generic400:
       description: Invalid argument
       content:
@@ -70,13 +74,15 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/ErrorInfo'
-    Generic403:
-      description: Permission denied or user not authenticated by mobile network
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/ErrorInfo'
   schemas:
+    NumberVerificationMatchResponse:
+      type: object
+      required:
+      - devicePhoneNumberVerified
+      properties:
+        devicePhoneNumberVerified:
+          type: boolean
+          description: Whether the supplied number matches the authenticated device
     NumberVerificationRequestBody:
       type: object
       description: 'Supply either phoneNumber or hashedPhoneNumber (not both).
@@ -109,14 +115,6 @@ components:
         message:
           type: string
           description: Human-readable error message
-    NumberVerificationMatchResponse:
-      type: object
-      required:
-      - devicePhoneNumberVerified
-      properties:
-        devicePhoneNumberVerified:
-          type: boolean
-          description: Whether the supplied number matches the authenticated device
   securitySchemes:
     openId:
       type: openIdConnect
