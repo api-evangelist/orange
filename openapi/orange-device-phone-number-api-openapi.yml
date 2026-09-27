@@ -48,25 +48,6 @@ paths:
       tags:
       - Device Phone Number
 components:
-  responses:
-    Generic403:
-      description: Permission denied or user not authenticated by mobile network
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/ErrorInfo'
-    Generic400:
-      description: Invalid argument
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/ErrorInfo'
-    Generic401:
-      description: Unauthenticated
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/ErrorInfo'
   schemas:
     DevicePhoneNumberResponse:
       type: object
@@ -93,6 +74,25 @@ components:
         message:
           type: string
           description: Human-readable error message
+  responses:
+    Generic401:
+      description: Unauthenticated
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorInfo'
+    Generic403:
+      description: Permission denied or user not authenticated by mobile network
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorInfo'
+    Generic400:
+      description: Invalid argument
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorInfo'
   securitySchemes:
     openId:
       type: openIdConnect
