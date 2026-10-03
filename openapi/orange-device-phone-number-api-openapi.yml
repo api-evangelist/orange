@@ -49,15 +49,6 @@ paths:
       - Device Phone Number
 components:
   schemas:
-    DevicePhoneNumberResponse:
-      type: object
-      required:
-      - devicePhoneNumber
-      properties:
-        devicePhoneNumber:
-          type: string
-          pattern: ^\+[1-9][0-9]{4,15}$
-          description: The phone number associated with the authenticated SIM in E.164 format
     ErrorInfo:
       type: object
       required:
@@ -74,6 +65,15 @@ components:
         message:
           type: string
           description: Human-readable error message
+    DevicePhoneNumberResponse:
+      type: object
+      required:
+      - devicePhoneNumber
+      properties:
+        devicePhoneNumber:
+          type: string
+          pattern: ^\+[1-9][0-9]{4,15}$
+          description: The phone number associated with the authenticated SIM in E.164 format
   responses:
     Generic401:
       description: Unauthenticated
@@ -81,14 +81,14 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/ErrorInfo'
-    Generic403:
-      description: Permission denied or user not authenticated by mobile network
+    Generic400:
+      description: Invalid argument
       content:
         application/json:
           schema:
             $ref: '#/components/schemas/ErrorInfo'
-    Generic400:
-      description: Invalid argument
+    Generic403:
+      description: Permission denied or user not authenticated by mobile network
       content:
         application/json:
           schema:
