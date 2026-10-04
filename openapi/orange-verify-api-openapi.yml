@@ -56,6 +56,14 @@ paths:
       - Verify
 components:
   schemas:
+    NumberVerificationMatchResponse:
+      type: object
+      required:
+      - devicePhoneNumberVerified
+      properties:
+        devicePhoneNumberVerified:
+          type: boolean
+          description: Whether the supplied number matches the authenticated device
     NumberVerificationRequestBody:
       type: object
       description: 'Supply either phoneNumber or hashedPhoneNumber (not both).
@@ -88,17 +96,9 @@ components:
         message:
           type: string
           description: Human-readable error message
-    NumberVerificationMatchResponse:
-      type: object
-      required:
-      - devicePhoneNumberVerified
-      properties:
-        devicePhoneNumberVerified:
-          type: boolean
-          description: Whether the supplied number matches the authenticated device
   responses:
-    Generic401:
-      description: Unauthenticated
+    Generic403:
+      description: Permission denied or user not authenticated by mobile network
       content:
         application/json:
           schema:
@@ -109,8 +109,8 @@ components:
         application/json:
           schema:
             $ref: '#/components/schemas/ErrorInfo'
-    Generic403:
-      description: Permission denied or user not authenticated by mobile network
+    Generic401:
+      description: Unauthenticated
       content:
         application/json:
           schema:
