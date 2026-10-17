@@ -55,6 +55,25 @@ paths:
       tags:
       - Verify
 components:
+  responses:
+    Generic401:
+      description: Unauthenticated
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorInfo'
+    Generic400:
+      description: Invalid argument
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorInfo'
+    Generic403:
+      description: Permission denied or user not authenticated by mobile network
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorInfo'
   schemas:
     NumberVerificationMatchResponse:
       type: object
@@ -64,22 +83,6 @@ components:
         devicePhoneNumberVerified:
           type: boolean
           description: Whether the supplied number matches the authenticated device
-    NumberVerificationRequestBody:
-      type: object
-      description: 'Supply either phoneNumber or hashedPhoneNumber (not both).
-
-        '
-      properties:
-        phoneNumber:
-          type: string
-          pattern: ^\+[1-9][0-9]{4,15}$
-          description: Phone number in E.164 format
-          examples:
-          - '+34123456789'
-        hashedPhoneNumber:
-          type: string
-          pattern: ^[A-Fa-f0-9]{64}$
-          description: SHA-256 hex hash of the E.164 phone number
     ErrorInfo:
       type: object
       required:
@@ -96,25 +99,22 @@ components:
         message:
           type: string
           description: Human-readable error message
-  responses:
-    Generic403:
-      description: Permission denied or user not authenticated by mobile network
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/ErrorInfo'
-    Generic400:
-      description: Invalid argument
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/ErrorInfo'
-    Generic401:
-      description: Unauthenticated
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/ErrorInfo'
+    NumberVerificationRequestBody:
+      type: object
+      description: 'Supply either phoneNumber or hashedPhoneNumber (not both).
+
+        '
+      properties:
+        phoneNumber:
+          type: string
+          pattern: ^\+[1-9][0-9]{4,15}$
+          description: Phone number in E.164 format
+          examples:
+          - '+34123456789'
+        hashedPhoneNumber:
+          type: string
+          pattern: ^[A-Fa-f0-9]{64}$
+          description: SHA-256 hex hash of the E.164 phone number
   securitySchemes:
     openId:
       type: openIdConnect
