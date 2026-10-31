@@ -1,4 +1,4 @@
-# Orange (orange)
+# Orange
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,274 +66,135 @@
 
 Orange Developer offers a portfolio of network, communication, identity, location, payment, IoT, and cloud APIs that allow developers to build new customer experiences powered by programmable networks and Orange's telecom infrastructure across Europe, the Middle East, and Africa.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/orange/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/orange/refs/heads/main/apis.yml)
+**Areas:** Networks · Telecommunications · Identity · Messaging · Location · Payments · IoT
 
-## Scope
+## Orange on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for Orange is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/orange/](https://apis.io/providers/orange/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (15)
 
-- Network
-- Telecom
-- Identity
-- Messaging
-- Location
-- Payment
-- IoT
+- [Number Verification API](https://apis.io/apis/orange/number-verification/) — Verifies phone numbers in real time against the operator network for identity confirmation, fraud prevention, and frictionless authentication.
+- [SIM Swap API](https://apis.io/apis/orange/sim-swap/) — Detects recent SIM card changes for a given mobile number to help prevent account takeover and fraud.
+- [KYC Match API](https://apis.io/apis/orange/kyc-match/) — Conducts know-your-customer matching against operator-held subscriber data to validate identities during onboarding.
+- [Device Swap API](https://apis.io/apis/orange/device-swap/) — Identifies recent changes of the device associated with a mobile number to flag potential fraud and verify continuity of identity.
+- [Live Identity API](https://apis.io/apis/orange/live-identity/) — Identity verification suite including Live Identity Captcha and Live Identity Verify for confirming a real, present user.
+- [Messaging APIs](https://apis.io/apis/orange/messaging/) — A portfolio of messaging APIs including SMS Middle East and Africa, Messaging Pro Cameroon, Voice as a Service, Business Talk, and Contact Everyone for…
+- [Device Location APIs](https://apis.io/apis/orange/device-location/) — Device Location Retrieval and Device Location Verification APIs that obtain or confirm a device's geographic position from the network.
+- [Geofencing API](https://apis.io/apis/orange/geofencing/) — Establishes geographic boundary alerts based on real-time device location served by the operator network.
+- [Network Dynamics APIs](https://apis.io/apis/orange/network-dynamics/) — Network insight APIs including Population Density Data, Quality of Service on Demand, Device Reachability Status, and Device Roaming Status.
+- [Orange Money API](https://apis.io/apis/orange/orange-money/) — Mobile payment platform API enabling developers to integrate Orange Money wallet transactions, transfers, and payments.
+- [Pay with Orange Bill API](https://apis.io/apis/orange/pay-with-orange-bill/) — Direct carrier billing API allowing customers to charge purchases to their Orange mobile bill.
+- [Cloud Connectivity APIs](https://apis.io/apis/orange/cloud-connectivity/) — A set of cloud and connectivity APIs including Cloud Avenue, Evolution Platform, EVPL Online, and Content Delivery Boost.
+- [IoT Managed Global Connectivity API](https://apis.io/apis/orange/iot/) — SIM management and device monitoring for IoT deployments across Orange's global cellular footprint.
+- [Orange Device Phone Number API](https://apis.io/apis/orange/orange-device-phone-number-api/) — The Device Phone Number API from Orange — 1 operation(s) for device phone number.
+- [Orange Verify API](https://apis.io/apis/orange/orange-verify-api/) — The Verify API from Orange — 1 operation(s) for verify.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2025-02-09
-- **Modified:** 2026-04-28
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Number Verification API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-Verifies phone numbers in real time against the operator network for identity confirmation, fraud prevention, and frictionless authentication.
+- [Orange Agentic Access](https://apis.io/agentic-access/orange/orange-agentic-access/)
 
-- **Human URL:** [https://docs.developer.orange.com/network-apis/api-catalog/number-verification/playground/1.0/overview](https://docs.developer.orange.com/network-apis/api-catalog/number-verification/playground/1.0/overview)
+#### Collections (3)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- Identity
-- Verification
-- Network
+- [Orange Number Verification API](https://apis.io/collections/orange/open-orange/)
+- [Orange Number Verification Device Phone Number API](https://apis.io/collections/orange/open-orange-device-phone-number-api/)
+- [Orange Number Verification Device Phone Number Verify API](https://apis.io/collections/orange/open-orange-verify-api/)
 
-#### Properties
+#### Security (3)
 
-- [Documentation](https://docs.developer.orange.com/network-apis/api-catalog/number-verification/playground/1.0/overview)
-- [Postman Collection](collections/orange.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/orange.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-### SIM Swap API
+- [Orange Authentication](https://apis.io/security/orange/orange-authentication/)
+- [Orange Domain Security](https://apis.io/security/orange/orange-domain-security/)
+- [Orange Vulnerability Disclosure](https://apis.io/security/orange/orange-vulnerability-disclosure/)
 
-Detects recent SIM card changes for a given mobile number to help prevent account takeover and fraud.
+#### Plans and pricing (1)
 
-- **Human URL:** [https://docs.developer.orange.com/network-apis/api-catalog/sim-swap/playground/1.0/overview](https://docs.developer.orange.com/network-apis/api-catalog/sim-swap/playground/1.0/overview)
+Published plans, tiers and prices.
 
-#### Tags
+- [Orange Plans Pricing](https://apis.io/plans/orange/orange-plans-pricing/)
 
-- Fraud Prevention
-- Identity
-- Network
+#### Rate limits (1)
 
-#### Properties
+Published request limits.
 
-- [Documentation](https://docs.developer.orange.com/network-apis/api-catalog/sim-swap/playground/1.0/overview)
-- [Postman Collection](collections/orange.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/orange.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [Orange Rate Limits](https://apis.io/rate-limits/orange/orange-rate-limits/)
 
-### KYC Match API
+#### FinOps (1)
 
-Conducts know-your-customer matching against operator-held subscriber data to validate identities during onboarding.
+What the API costs to run, by operation.
 
-- **Human URL:** [https://docs.developer.orange.com/network-apis/api-catalog/kyc-match/playground/0.2/overview](https://docs.developer.orange.com/network-apis/api-catalog/kyc-match/playground/0.2/overview)
+- [Orange Finops](https://apis.io/finops/orange/orange-finops/)
 
-#### Tags
+## Where to find this API
 
-- Identity
-- KYC
-- Compliance
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-#### Properties
-
-- [Documentation](https://docs.developer.orange.com/network-apis/api-catalog/kyc-match/playground/0.2/overview)
-- [Postman Collection](collections/orange.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/orange.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Device Swap API
-
-Identifies recent changes of the device associated with a mobile number to flag potential fraud and verify continuity of identity.
-
-- **Human URL:** [https://docs.developer.orange.com/network-apis/api-catalog/device-swap/es/0.1/overview](https://docs.developer.orange.com/network-apis/api-catalog/device-swap/es/0.1/overview)
-
-#### Tags
-
-- Fraud Prevention
-- Network
-
-#### Properties
-
-- [Documentation](https://docs.developer.orange.com/network-apis/api-catalog/device-swap/es/0.1/overview)
-- [Postman Collection](collections/orange.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/orange.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Live Identity API
-
-Identity verification suite including Live Identity Captcha and Live Identity Verify for confirming a real, present user.
-
-- **Human URL:** [https://developer.orange.com/apis/live-identity-verify](https://developer.orange.com/apis/live-identity-verify)
-
-#### Tags
-
-- Identity
-- Verification
-
-#### Properties
-
-- [Documentation](https://developer.orange.com/apis/live-identity-verify)
-- [Captcha](https://developer.orange.com/apis/live-identity-captcha)
-- [Postman Collection](collections/orange.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/orange.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Messaging APIs
-
-A portfolio of messaging APIs including SMS Middle East and Africa, Messaging Pro Cameroon, Voice as a Service, Business Talk, and Contact Everyone for enterprise and regional communications.
-
-- **Human URL:** [https://developer.orange.com/apis/](https://developer.orange.com/apis/)
-
-#### Tags
-
-- Messaging
-- SMS
-- Voice
-
-#### Properties
-
-- [Documentation](https://developer.orange.com/apis/)
-- [Postman Collection](collections/orange.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/orange.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Device Location APIs
-
-Device Location Retrieval and Device Location Verification APIs that obtain or confirm a device's geographic position from the network.
-
-- **Human URL:** [https://developer.orange.com/apis/](https://developer.orange.com/apis/)
-
-#### Tags
-
-- Location
-- Network
-
-#### Properties
-
-- [Documentation](https://developer.orange.com/apis/)
-- [Postman Collection](collections/orange.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/orange.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Geofencing API
-
-Establishes geographic boundary alerts based on real-time device location served by the operator network.
-
-- **Human URL:** [https://developer.orange.com/apis/](https://developer.orange.com/apis/)
-
-#### Tags
-
-- Location
-- Geofencing
-
-#### Properties
-
-- [Documentation](https://developer.orange.com/apis/)
-- [Postman Collection](collections/orange.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/orange.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Network Dynamics APIs
-
-Network insight APIs including Population Density Data, Quality of Service on Demand, Device Reachability Status, and Device Roaming Status.
-
-- **Human URL:** [https://developer.orange.com/apis/](https://developer.orange.com/apis/)
-
-#### Tags
-
-- Network
-- Quality of Service
-- Insights
-
-#### Properties
-
-- [Documentation](https://developer.orange.com/apis/)
-- [Postman Collection](collections/orange.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/orange.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Orange Money API
-
-Mobile payment platform API enabling developers to integrate Orange Money wallet transactions, transfers, and payments.
-
-- **Human URL:** [https://developer.orange.com/apis/](https://developer.orange.com/apis/)
-
-#### Tags
-
-- Payment
-- Wallet
-- Mobile Money
-
-#### Properties
-
-- [Documentation](https://developer.orange.com/apis/)
-- [Postman Collection](collections/orange.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/orange.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Pay with Orange Bill API
-
-Direct carrier billing API allowing customers to charge purchases to their Orange mobile bill.
-
-- **Human URL:** [https://developer.orange.com/apis/](https://developer.orange.com/apis/)
-
-#### Tags
-
-- Payment
-- Carrier Billing
-
-#### Properties
-
-- [Documentation](https://developer.orange.com/apis/)
-- [Postman Collection](collections/orange.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/orange.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### Cloud Connectivity APIs
-
-A set of cloud and connectivity APIs including Cloud Avenue, Evolution Platform, EVPL Online, and Content Delivery Boost.
-
-- **Human URL:** [https://developer.orange.com/apis/](https://developer.orange.com/apis/)
-
-#### Tags
-
-- Cloud
-- Connectivity
-
-#### Properties
-
-- [Documentation](https://developer.orange.com/apis/)
-- [Postman Collection](collections/orange.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/orange.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-### IoT Managed Global Connectivity API
-
-SIM management and device monitoring for IoT deployments across Orange's global cellular footprint.
-
-- **Human URL:** [https://developer.orange.com/apis/](https://developer.orange.com/apis/)
-
-#### Tags
-
-- IoT
-- Connectivity
-- SIM
-
-#### Properties
-
-- [Documentation](https://developer.orange.com/apis/)
-- [Postman Collection](collections/orange.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/orange.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
-
-## Common Properties
-
-- [GitHub Organization](https://github.com/Orange-OpenSource)
-- [LinkedIn](https://www.linkedin.com/company/orange)
-- [Portal](https://developer.orange.com/)
-- [Documentation](https://developer.orange.com/apis/)
-- [Sign Up](https://developer.orange.com/user/register)
-- [Login](https://developer.orange.com/user/login)
-- [Terms of Service](https://developer.orange.com/terms-conditions)
-- [Privacy Policy](https://developer.orange.com/privacy-policy)
-- [Support](https://developer.orange.com/forum)
 - [Website](https://www.orange.com/)
+- [Documentation](https://developer.orange.com/apis/)
+- [Support](https://developer.orange.com/forum)
+- [Blog](https://www.orange.com/blog/)
+- [Terms of service](https://developer.orange.com/terms-conditions)
+- [Privacy policy](https://developer.orange.com/privacy-policy)
+- [GitHub](https://github.com/Orange-OpenSource)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 28.0** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 57.1 |
+| Contract quality | 47.8 |
+| Contract governance | 0.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 38.1 |
+| Access clarity | 14.5 |
+
+**Agent readiness 22.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | negotiable (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | documented (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 15.0** — Telecommunications
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/orange/](https://apis.io/providers/orange/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Orange: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/orange/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
